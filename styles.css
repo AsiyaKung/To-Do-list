@@ -42,18 +42,6 @@ h2 {
     margin-bottom: 20px;
 }
 
-.category-buttons a button {
-    padding: 50px 0;
-    width: 100%;
-    cursor: pointer;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    color: black;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
 .work-button, 
 .study-button, 
 .exercise-button, 
@@ -80,20 +68,20 @@ h2 {
     background-color: #ffb3b3;
 }
 
-.category-buttons a button:hover {
-    transform: scale(1.05);
-}
-
 .work-button:hover {
+    transform: scale(1.05);
     background-color: #ffc3fc;
 }
 .study-button:hover {
+    transform: scale(1.05);
     background-color: #9ad6ff;
 }
 .exercise-button:hover {
+    transform: scale(1.05);
     background-color: #8effbd;
 }
 .others-button:hover {
+    transform: scale(1.05);
     background-color: #fc9797;
 }
 
@@ -272,9 +260,16 @@ input[type="text"]:focus {
     background: #333;
 }
 
-@media (max-width: 600px) {
-    .container {
-        width: 90%;
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+        justify-content: flex-start;
+    }
+
+    .container, .container-menu {
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
     }
 
     .category-buttons {
@@ -283,7 +278,7 @@ input[type="text"]:focus {
 
     .category-buttons button {
         font-size: 18px;
-        padding: 20px 0;
+        padding: 15px 0;
     }
 
     #taskList li {
@@ -291,11 +286,60 @@ input[type="text"]:focus {
         padding: 12px;
     }
 
+    input[type="text"] {
+        width: 100%;
+        font-size: 16px;
+    }
+
     button {
         width: 100%;
+        font-size: 16px;
+    }
+
+    .settings-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+
+    .container, .container-menu {
+        width: 100%;
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .category-buttons button {
+        font-size: 16px;
+        padding: 12px 0;
+    }
+
+    #taskList li {
+        font-size: 12px;
+        padding: 10px;
     }
 
     input[type="text"] {
-        width: 100%;
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    .settings-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+        bottom: 10px;
+        right: 10px;
     }
 }
+
