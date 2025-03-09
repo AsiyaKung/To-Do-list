@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="welcome"></h1>
+    <div class="container-menu">
+        <button class="work-button" onclick="location.href='work.html'">💼 Work</button>
+        <button class="study-button" onclick="location.href='study.html'">📚 Study</button>
+        <button class="exercise-button" onclick="location.href='exercise.html'">💪🏻 Exercise</button>
+        <button class="others-button" onclick="location.href='others.html'">💬 Others</button>
+    </div>
+    <button class="settings-btn" onclick="location.href='settings.html'">⚙</button>
+    <script>
+        document.getElementById("welcome").innerText = "Hello, " + (localStorage.getItem("username") || "User");
+    </script>
+</body>
+</html>

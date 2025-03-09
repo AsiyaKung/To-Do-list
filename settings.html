@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+    <h1>Settings</h1>
+    <input type="text" id="newName" placeholder="Enter new name">
+    <button onclick="changeName()">Save</button>
+    <br />
+    <button onclick="location.href='main.html'">Back</button>
+</div>
+    
+    <script>
+        function changeName() {
+            let newName = document.getElementById("newName").value;
+            if (newName.trim() !== "") {
+                localStorage.setItem("username", newName);
+                alert("Name updated!");
+                window.location.href = "main.html";
+            } else {
+                alert("Please enter a valid name.");
+            }
+        }
+    </script>
+</body>
+</html>

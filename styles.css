@@ -1,0 +1,302 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f9;
+    flex-direction: column;
+}
+
+.container {
+    text-align: center;
+    width: 400px;
+    position: relative;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container-menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* ทำให้เป็น 2 คอลัมน์ */
+    gap: 10px; /* เพิ่มระยะห่างระหว่างปุ่ม */
+    text-align: center;
+    width: 400px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.category-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.category-buttons a button {
+    padding: 50px 0;
+    width: 100%;
+    cursor: pointer;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    color: black;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* ปรับขนาดเฉพาะปุ่ม Work, Study, Exercise, Others */
+.work-button, 
+.study-button, 
+.exercise-button, 
+.others-button {
+    width: 100%;
+    height: 120px; /* ปรับให้ใหญ่ขึ้น */
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* สีปุ่ม */
+.work-button {
+    background-color: #ffdcfd;
+}
+.study-button {
+    background-color: #c0e6ff;
+}
+.exercise-button {
+    background-color: #baffd7;
+}
+.others-button {
+    background-color: #ffb3b3;
+}
+
+.category-buttons a button:hover {
+    transform: scale(1.05);
+}
+
+.work-button:hover {
+    background-color: #ffc3fc;
+}
+.study-button:hover {
+    background-color: #9ad6ff;
+}
+.exercise-button:hover {
+    background-color: #8effbd;
+}
+.others-button:hover {
+    background-color: #fc9797;
+}
+
+/* ----------------------------------- */
+
+.work-btn {
+    transition: background-color 0.3s, transform 0.2s;
+    background-color: #ffdcfd;
+}
+.study-btn {
+    transition: background-color 0.3s, transform 0.2s;
+    background-color: #c0e6ff;
+}
+.exercise-btn {
+    transition: background-color 0.3s, transform 0.2s;
+    background-color: #baffd7;
+}
+.others-btn {
+    transition: background-color 0.3s, transform 0.2s;
+    background-color: #ffb3b3;
+}
+
+.work-btn:hover {
+    transition: background-color 0.3s, transform 0.2s;
+    background-color: #ffc3fc;
+    transform: scale(1.05);
+}
+.study-btn:hover {
+    transition: background-color 0.3s, transform 0.2s;
+    background-color: #9ad6ff;
+    transform: scale(1.05);
+}
+.exercise-btn:hover {
+    transition: background-color 0.3s, transform 0.2s;
+    background-color: #8effbd;
+    transform: scale(1.05);
+}
+.others-btn:hover {
+    transition: background-color 0.3s, transform 0.2s;
+    background-color: #fc9797;
+    transform: scale(1.05);
+}
+
+/* ----------------------------------- */
+
+.hidden {
+    display: none;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #5e5e5e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #3f3f3f;
+}
+
+#taskList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#taskList li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.task-text {
+    flex: 1;
+    word-break: break-word;  /* แก้ไขให้ข้อความยาวเกินขอบไปเป็นบรรทัดใหม่ */
+    white-space: normal;     /* ให้ข้อความที่ยาวเกินไปไปบรรทัดถัดไป */
+    overflow-wrap: break-word;
+}
+
+.task-actions {
+    display: flex;
+    flex-direction: column; /* ให้ปุ่มเรียงแนวตั้ง */
+    gap: 5px; /* เพิ่มระยะห่างระหว่างปุ่ม */
+    margin-left: auto; /* ให้ปุ่มไปชิดขวา */
+}
+
+#taskList li button {
+    min-width: 40px;
+    min-height: 35px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+#taskList li button.delete-btn {
+    background-color: #e74c3c;
+}
+
+#taskList li button.delete-btn:hover {
+    background-color: #c0392b;
+    transform: scale(1.1);
+}
+
+#taskList li button.complete-btn {
+    background-color: #4CAF50;
+}
+
+#taskList li button.complete-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
+#taskList li.completed .task-text {
+    text-decoration: line-through; /* ขีดเส้นใต้เมื่อเสร็จแล้ว */
+    color: gray; /* เปลี่ยนสีข้อความเมื่อเสร็จแล้ว */
+}
+
+
+
+#taskCount {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 80%;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+.category-buttons button {
+    padding: 20px 0;
+    font-size: 16px;
+}
+
+.settings-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #555;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.settings-btn:hover {
+    background: #333;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+
+    .category-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .category-buttons button {
+        font-size: 18px;
+        padding: 20px 0;
+    }
+
+    #taskList li {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    input[type="text"] {
+        width: 100%;
+    }
+}
