@@ -21,8 +21,8 @@ body {
 
 .container-menu {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* ทำให้เป็น 2 คอลัมน์ */
-    gap: 10px; /* เพิ่มระยะห่างระหว่างปุ่ม */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
     text-align: center;
     width: 400px;
     padding: 20px;
@@ -54,13 +54,12 @@ h2 {
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-/* ปรับขนาดเฉพาะปุ่ม Work, Study, Exercise, Others */
 .work-button, 
 .study-button, 
 .exercise-button, 
 .others-button {
     width: 100%;
-    height: 120px; /* ปรับให้ใหญ่ขึ้น */
+    height: 120px;
     font-size: 20px;
     font-weight: bold;
     border-radius: 10px;
@@ -178,16 +177,16 @@ button:hover {
 
 .task-text {
     flex: 1;
-    word-break: break-word;  /* แก้ไขให้ข้อความยาวเกินขอบไปเป็นบรรทัดใหม่ */
-    white-space: normal;     /* ให้ข้อความที่ยาวเกินไปไปบรรทัดถัดไป */
+    word-break: break-word;
+    white-space: normal;
     overflow-wrap: break-word;
 }
 
 .task-actions {
     display: flex;
-    flex-direction: column; /* ให้ปุ่มเรียงแนวตั้ง */
-    gap: 5px; /* เพิ่มระยะห่างระหว่างปุ่ม */
-    margin-left: auto; /* ให้ปุ่มไปชิดขวา */
+    flex-direction: column;
+    gap: 5px;
+    margin-left: auto;
 }
 
 #taskList li button {
@@ -223,8 +222,8 @@ button:hover {
 }
 
 #taskList li.completed .task-text {
-    text-decoration: line-through; /* ขีดเส้นใต้เมื่อเสร็จแล้ว */
-    color: gray; /* เปลี่ยนสีข้อความเมื่อเสร็จแล้ว */
+    text-decoration: line-through;
+    color: gray;
 }
 
 
